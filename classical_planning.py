@@ -7,8 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1qRTF7yHzRsmps_Zm08JuKHEuHSlf21KV
 """
 
+
 def is_goal_state(current_state, goal_state):
-    #TYPE THE CODE HERE[WHERE THE CURRENT STATE EQUALS THE GOAL STATE]
+    return current_state == goal_state
 
 def apply_action(current_state, action_effect):
     new_state = current_state.copy()
@@ -39,6 +40,7 @@ def find_plan(initial_state, goal_state, actions):
     return None
 def is_applicable(current_state, precondition):
     return all(current_state.get(key) == value for key, value in precondition.items())
+
 # Example usage
 '''
 initial_state = {'A': 'Table', 'B': 'Table'}
